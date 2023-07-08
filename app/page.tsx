@@ -29,6 +29,7 @@ const App = () => {
           </Head>
           <DefaultSeo {...SEO} />
           <Header />
+          Hello wormd
           <Footer />
         </PlausibleProvider>
       </ChakraProvider>
