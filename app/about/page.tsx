@@ -24,7 +24,7 @@ import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
 import  Container   from "@/components/container";
 
-const App = () => {
+const About = () => {
   return (
     <>
         <ChakraProvider>
@@ -60,4 +60,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default About;
