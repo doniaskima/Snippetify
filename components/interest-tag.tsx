@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, Tag, WrapItem } from "@chakra-ui/react";
 
-const InterestTag = ({ name, like }) => {
+const InterestTag = ({ name}) => {
   return (
     <WrapItem>
       <Tag
         size="lg"
         variant="subtle"
-        colorScheme={like ? "green" : "red"}
+        colorScheme="pink"
         rounded="lg"
       >
         {name}
