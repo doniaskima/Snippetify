@@ -8,6 +8,7 @@ import SEO from "../next-seo.config";
 import PlausibleProvider from "next-plausible";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import SnippetsGrid from "@/components/SnippetsGrid";
 
 const App = () => {
   return (
@@ -29,7 +30,12 @@ const App = () => {
           </Head>
           <DefaultSeo {...SEO} />
           <Header />
-          Hello wormd
+          <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
+  
+            <SnippetsGrid>
+              Heyy Hello Im a snppets grid 
+            </SnippetsGrid>
+          </Box>
           <Footer />
         </PlausibleProvider>
       </ChakraProvider>

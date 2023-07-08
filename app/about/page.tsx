@@ -1,6 +1,5 @@
 
 "use client"
-
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import {
