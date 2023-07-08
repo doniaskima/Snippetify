@@ -2,6 +2,7 @@
 import Head from "next/head";
 import React from "react";
 import { Box, ChakraProvider } from "@chakra-ui/react";
+
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 import PlausibleProvider from "next-plausible";
@@ -12,7 +13,7 @@ const App = () => {
   return (
     <>
       <ChakraProvider>
-        <PlausibleProvider domain="danielwirtz.com">
+        <PlausibleProvider domain="snippetify.com">
           <Head>
             <meta
               content="width=device-width, initial-scale=1"

@@ -15,12 +15,13 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@heroicons/react": "^2.0.18",
+    "@radix-ui/react-hover-card": "^1.0.6",
+    "@stitches/core": "^1.2.8",
+    "@stitches/react": "^1.2.8",
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.9",
     "framer-motion": "^10.12.18",
     "next": "13.4.9",
     "next-plausible": "^3.8.0",
@@ -33,5 +34,10 @@
     "theme": "^0.1.0",
     "typescript": "5.1.6",
     "use-sound": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "eslint-config-next": "^13.4.9",
+    "prettier": "^3.0.0"
   }
 }
