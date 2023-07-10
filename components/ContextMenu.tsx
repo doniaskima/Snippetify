@@ -5,8 +5,14 @@ import * as RadixContextMenu from '@radix-ui/react-context-menu';
 
 const timeout = 3000;
 
-const ContextMenu = ({ children, cssStyling, scssStyling }) => {
-  const copyToClipboard = async (styling) => {
+interface ContextMenuProps {
+  children: React.ReactNode;
+  cssStyling: string;
+  scssStyling: string;
+}
+
+const ContextMenu: React.FC<ContextMenuProps> = ({ children, cssStyling, scssStyling }) => {
+  const copyToClipboard = async (styling: string) => {
     try {
       await navigator.clipboard.writeText(styling);
 

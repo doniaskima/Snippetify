@@ -1,7 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { SlideFade } from "@chakra-ui/react";
 
-const PageTransition = ({ children }) => {
+interface PageTransitionProps {
+  children: ReactNode;
+}
+
+const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   return <SlideFade in>{children}</SlideFade>;
 };
 

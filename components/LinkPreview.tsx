@@ -1,12 +1,16 @@
+import React, { useEffect, useState } from 'react';
+import { styled, keyframes } from '../stitches.config';
 import * as HoverCard from '@radix-ui/react-hover-card';
 import Image from 'next/image';
 import { encode } from 'qss';
-import { useEffect, useState } from 'react';
-import { keyframes } from '../stitches.config';
 import * as Portal from '@radix-ui/react-portal';
-import { styled } from '../stitches.config';
 
-const LinkPreview = ({ url, children }) => {
+interface LinkPreviewProps {
+  url: string;
+  children: React.ReactNode;
+}
+
+const LinkPreview: React.FC<LinkPreviewProps> = ({ url, children }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   const previewImage = {

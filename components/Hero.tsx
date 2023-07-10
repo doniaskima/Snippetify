@@ -1,8 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { VStack, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import Section from "@/components/section";
 
-const Hero = ({ title = "Title", subtitle, align = "center" }) => {
+interface HeroProps {
+  title: string;
+  subtitle?: string;
+  align?: "left" | "center" | "right";
+}
+
+const Hero: React.FC<HeroProps> = ({ title, subtitle, align = "center" }) => {
   return (
     <Section>
       <VStack align={align}>
