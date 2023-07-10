@@ -32,9 +32,7 @@ const App = () => {
           <Header />
           <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
   
-            <SnippetsGrid>
-              Heyy Hello Im a snppets grid 
-            </SnippetsGrid>
+            <SnippetsGrid/>
           </Box>
           <Footer />
         </PlausibleProvider>

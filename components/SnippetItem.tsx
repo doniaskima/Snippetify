@@ -1,26 +1,18 @@
+import React from 'react';
 import styled from 'styled-components';
 
-
-
-const SnippetsGrid = ({ children }) => {
-  return (
-    <Wrapper>
-      {children}
-    </Wrapper>
-  );
+const SnippetsGridItem = ({ children }) => {
+  return <Wrapper>{children}</Wrapper>;
 };
 
 const Wrapper = styled.div`
-  display: grid;
-  gap: $4;
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media screen and (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  height: 120px;
+  background-color: #333333;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
 `;
 
-export default SnippetsGrid;
+export default SnippetsGridItem;
