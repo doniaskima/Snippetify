@@ -31,8 +31,8 @@ const ContextMenu: React.FC<ContextMenuProps> = ({ children, cssStyling, scssSty
     <RadixContextMenu.Root>
       <RadixContextMenu.Trigger>{children}</RadixContextMenu.Trigger>
       <Content>
-        <Item onSelect={() => copyToClipboard(cssStyling)}>CSS</Item>
-        <Item onSelect={() => copyToClipboard(scssStyling)}>SCSS</Item>
+        <Item onClick={() => copyToClipboard(cssStyling)}>Copy CSS</Item>
+        <Item onClick={() => copyToClipboard(scssStyling)}>Copy SCSS</Item>
       </Content>
     </RadixContextMenu.Root>
   );
@@ -40,14 +40,14 @@ const ContextMenu: React.FC<ContextMenuProps> = ({ children, cssStyling, scssSty
 
 export default ContextMenu;
 
-const scaleIn = keyframes`
-  0% { transform: scale(0.9); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
 `;
 
-const scaleOut = keyframes`
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(0.9); opacity: 0; }
+const fadeOut = keyframes`
+  from { opacity: 1; }
+  to { opacity: 0; }
 `;
 
 const Content = styled(RadixContextMenu.Content)`
@@ -59,23 +59,28 @@ const Content = styled(RadixContextMenu.Content)`
   transform-origin: var(--radix-context-menu-content-transform-origin);
 
   &[data-state="open"] {
-    animation: ${scaleIn} 0.15s ease;
+    animation: ${fadeIn} 0.15s ease;
   }
 
   &[data-state="closed"] {
-    animation: ${scaleOut} 0.1s ease;
+    animation: ${fadeOut} 0.1s ease;
   }
 `;
 
 const Item = styled(RadixContextMenu.Item)`
   font-size: 13px;
   border-radius: 4px;
-  cursor: default;
+  cursor: pointer;
   height: 28px;
   padding: 4px 8px;
   display: flex;
   align-items: center;
   color: gray;
+
+  &:hover {
+    background-color: hsl(207, 11%, 91%);
+    color: darkGray;
+  }
 
   &:focus {
     outline: none;
