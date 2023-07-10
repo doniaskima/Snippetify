@@ -9,6 +9,9 @@ import PlausibleProvider from "next-plausible";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SnippetsGrid from "@/components/SnippetsGrid";
+import Container from "@/components/container"
+
+ 
 
 const App = () => {
   return (
@@ -31,8 +34,10 @@ const App = () => {
           <DefaultSeo {...SEO} />
           <Header />
           <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
-  
+          <Container> 
             <SnippetsGrid/>
+          </Container>
+         
           </Box>
           <Footer />
         </PlausibleProvider>

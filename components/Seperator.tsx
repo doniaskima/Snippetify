@@ -1,26 +1,25 @@
-import { styled } from '@stitches/react';
+import styled from 'styled-components';
 import React from 'react';
- 
 
 const Separator = () => {
   return (
     <Wrapper>
-      <Seperator />
+      <SeparatorLine />
     </Wrapper>
   );
 };
 
-const Wrapper = styled('div', {
-  display: 'flex',
-  justifyContent: 'center'
-});
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
-const Seperator = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  height: '1px',
-  width: '45px',
-  backgroundColor: '$darkGray'
-});
+const SeparatorLine = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 1px;
+  width: 45px;
+  background-color: $darkGray;
+`;
 
 export default Separator;

@@ -45,7 +45,7 @@ const scaleOut = keyframes`
 `;
 
 const Content = styled(RadixContextMenu.Content)`
-  min-width: 160px;
+  min-width: 120px;
   background-color: white;
   border-radius: 6px;
   padding: 5px;

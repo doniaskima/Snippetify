@@ -4,7 +4,7 @@ import ContextMenu from './ContextMenu';
 import SnippetsGridItem from './SnippetItem';
 import allSnippets from './Snippets';
 
-const SnippetsGrid = ({ children }) => {
+const SnippetsGrid = () => {
   return (
     <Wrapper>
       {allSnippets.map(({ Component, cssStyling, scssStyling }) => (
@@ -20,7 +20,7 @@ const SnippetsGrid = ({ children }) => {
 
 const Wrapper = styled.div`
   display: grid;
-  gap: 4px;
+  gap: 16px;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;

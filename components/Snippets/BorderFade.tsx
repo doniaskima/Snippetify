@@ -5,6 +5,7 @@ const Component = () => {
   return <Wrapper>Hover over me</Wrapper>;
 };
 
+
 const Wrapper = styled.a`
   padding-bottom: 1px;
   color: white;
