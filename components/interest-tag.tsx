@@ -1,15 +1,14 @@
 import React from "react";
-import { Box, Tag, WrapItem } from "@chakra-ui/react";
+import { Box, Tag, WrapItem, WrapItemProps } from "@chakra-ui/react";
 
-const InterestTag = ({ name}) => {
+interface InterestTagProps extends WrapItemProps {
+  name: string;
+}
+
+const InterestTag: React.FC<InterestTagProps> = ({ name, ...rest }) => {
   return (
-    <WrapItem>
-      <Tag
-        size="lg"
-        variant="subtle"
-        colorScheme="pink"
-        rounded="lg"
-      >
+    <WrapItem {...rest}>
+      <Tag size="lg" variant="subtle" colorScheme="pink" rounded="lg">
         {name}
       </Tag>
     </WrapItem>

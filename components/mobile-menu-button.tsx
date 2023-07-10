@@ -1,7 +1,17 @@
-import React from "react";
-import { VStack, Text, useColorModeValue, Icon } from "@chakra-ui/react";
+import React, { ReactNode } from "react";
+import { VStack, Text, useColorModeValue, Icon, BoxProps } from "@chakra-ui/react";
+import { IconType } from "react-icons";
 
-const MobileMenuButton = ({ label, icon, ...rest }) => {
+interface MobileMenuButtonProps extends BoxProps {
+  label: string;
+  icon: IconType;
+}
+
+const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({
+  label,
+  icon,
+  ...rest
+}) => {
   return (
     <VStack
       as="button"
@@ -11,7 +21,7 @@ const MobileMenuButton = ({ label, icon, ...rest }) => {
       {...rest}
       color={useColorModeValue("neutral.1100", "neutralD.1100")}
     >
-      <Icon>{icon}</Icon>
+      <Icon as={icon} />
 
       <Text
         fontSize="xs"

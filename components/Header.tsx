@@ -25,7 +25,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Container from "./container";
-// import { useRouter } from "next/router";
+import { useRouter } from 'next/navigation'
 import ThemeToggle from "./theme-toggle";
 
 import Link from "next/link";
@@ -34,16 +34,16 @@ import Link from "next/link";
 function NavLink(props:any) {
   const { href, name, ...rest } = props;
   var isActive = false;
-//   const { pathname } = useRouter();
+  const   pathname   = useRouter();
 
   if (href !== "/") {
     const [, group] = href.split("/");
 
     // isActive = pathname.includes(group);
   } else {
-    // if (href === pathname) {
-    //   isActive = true;
-    // }
+    if (href === pathname) {
+      isActive = true;
+    }
   }
 
   return (
