@@ -87,14 +87,14 @@ const Header = () => {
           <HStack justify="space-between" w="100%" h={16}>
             {/* <AvatarNavigation /> */}
             <HStack ml={-4} spacing={2}>
-              <NavLink href="/blog" name="Blog" />
+              <NavLink href="/choose-colors" name="Palettes " />
               <NavLink href="/about" name="About" />
               <Menu isOpen={isOpen}>
                 <MenuButton
                   onMouseEnter={onOpen}
                   onMouseLeave={onClose}
                   as={Button}
-                //   rightIcon={<Icon as={ChevronDownIcon} />}
+            
                 >
                   Lists
                 </MenuButton>
