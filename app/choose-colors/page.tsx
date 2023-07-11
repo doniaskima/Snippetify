@@ -1,24 +1,9 @@
 
 "use client"
-import { Box, ChakraProvider } from "@chakra-ui/react";
-import Head from "next/head";
-import {
-  Button,
-  VStack,
-  HStack,
-  Text,
-  IconButton,
-  Heading,
-  Wrap,
-} from "@chakra-ui/react";
-import PageTransition from "@/components/PageTransition";
-import Section from "@/components/section";
-
-import InterestTag from "@/components/interest-tag";
-import Hero from "@/components/Hero";
-import Link from "@/components/Link";
+import { Box, ChakraProvider, VStack } from "@chakra-ui/react";
 import Header from "@/components/Header";
-import AnimationText from "@/components/AnimationText";
+import Section from "@/components/section";
+import { Grommet } from "grommet";
 
 const About = () => {
   return (
@@ -26,8 +11,12 @@ const About = () => {
         <ChakraProvider>
         <Header/>
         <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
-            Hello palette :3
-          </Box>
+        <VStack spacing={12} mt={6}> 
+        <Section>
+           Hello bro :3
+        </Section>
+        </VStack>
+        </Box>
     </ChakraProvider>
     </>
  

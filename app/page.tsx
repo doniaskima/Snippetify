@@ -2,7 +2,6 @@
 import Head from "next/head";
 import React from "react";
 import { Box, ChakraProvider } from "@chakra-ui/react";
-
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 import PlausibleProvider from "next-plausible";
@@ -10,7 +9,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SnippetsGrid from "@/components/SnippetsGrid";
 import Container from "@/components/container"
-
+ 
  
 
 const App = () => {
