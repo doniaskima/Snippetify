@@ -14,6 +14,14 @@ import * as Hoverme from "./Hoverme"
 import * as Cornerstone from "./Cornerstone"
 import * as HueRotationButton from "./HueRotationButton"
 import * as card3d from "./card3d"
+import * as HoverMeButton from "./HoverMeButton"
+import * as GreenHover from "./GreenHover"
+import * as threeD from "./threeD"
+import * as ClickMe from "./ClickMe"
+import * as lenfear23 from "./lenfear23"
+import * as AnotherHover from "./AnotherHover"
+import * as FlickUp from "./FlickUp"
+import * as DonutSpinner from "./DonutSpinner"
 
 const allSnippets = [
     BorderFade,
@@ -31,7 +39,15 @@ const allSnippets = [
     Hoverme,
     HueRotationButton,
     Cornerstone,
-    card3d
+    card3d,
+    HoverMeButton,
+    GreenHover,
+    threeD,
+    ClickMe,
+    lenfear23,
+    AnotherHover,
+    FlickUp,
+    DonutSpinner
 ];
 
 export default allSnippets;
