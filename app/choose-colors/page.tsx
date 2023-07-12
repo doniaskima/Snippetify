@@ -7,12 +7,12 @@ import Header from "@/components/Header";
 import Section from "@/components/section";
 import { Grommet } from "grommet";
 import grommetTheme from "@/utils/grommetTheme";
-import { neutral, light } from "@/utils/theme";
+import { light } from "@/utils/theme";
 import Body from "@/components/Palette/Body/Body";
 
 interface AboutProps {
   baseColor: string;
-  gradient: boolean;
+  gradient: string;
 }
 
 const Wrapper = styled.div`

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Display from "./Display";
-import Control from "./Control";
+import Controls from "./Control";
+
 
 interface BodyProps {
   cssCode: string;
@@ -44,9 +45,17 @@ const Body: React.FC<BodyProps> = ({
 }) => {
   return (
     <Container>
-        Hey Hey Hello :3
-        <Control/>
-        <Display/>
+  
+        <Controls
+        cssCode={cssCode}
+        cssToCopied={cssToCopied}
+        baseColor={baseColor}
+        gradient={gradient}
+        position={position}
+        weight={weight}
+        handleChange={handleChange}
+      />
+    
     </Container>
   );
 };
