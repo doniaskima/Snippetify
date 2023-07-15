@@ -22,6 +22,11 @@ import * as lenfear23 from "./lenfear23"
 import * as AnotherHover from "./AnotherHover"
 import * as FlickUp from "./FlickUp"
 import * as DonutSpinner from "./DonutSpinner"
+import * as IndigoBtn from "./IndigoBtn"
+import * as Spinner from "./Spinner"
+import * as JellyBtn from "./JellyBtn"
+import * as loader from "./loader"
+import * as CuteOne from "./CuteOne"
 
 const allSnippets = [
     BorderFade,
@@ -47,7 +52,12 @@ const allSnippets = [
     lenfear23,
     AnotherHover,
     FlickUp,
-    DonutSpinner
+    DonutSpinner,
+    IndigoBtn,
+    Spinner,
+    JellyBtn,
+    loader,
+    CuteOne
 ];
 
 export default allSnippets;
