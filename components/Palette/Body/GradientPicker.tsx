@@ -1,9 +1,16 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import styled from "styled-components";
 import Icon from "react-eva-icons";
 import { DropButton } from "grommet";
-import gradients from "@/utils/gradients";
+import GradientCircle from "./GradientCircle";
 import { neutral } from "@/utils/theme";
+import gradients from "@/utils/gradients";
+ 
+
+interface GradientPickerProps {
+  gradient: string;
+  handleChange: (name: string) => (event: ChangeEvent<HTMLInputElement>) => void;
+}
 
 const Dropdown = styled.div`
   padding: 0.75rem;
@@ -14,6 +21,7 @@ const Dropdown = styled.div`
 const Label = styled.div`
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
+
   font-family: "Prompt", sans-serif;
   font-size: 0.8rem;
   font-weight: normal;
@@ -36,12 +44,10 @@ const StyledDropButton = styled(DropButton)`
   max-width: 160px;
 `;
 
-interface GradientPickerProps {
-  gradient: string;
-  handleChange: (name: string) => (value: string) => void;
-}
-
-const GradientPicker: React.FC<GradientPickerProps> = ({ gradient, handleChange }) => {
+const GradientPicker: React.FC<GradientPickerProps> = ({
+  gradient,
+  handleChange,
+}) => {
   return (
     <StyledDropButton
       alignSelf="center"
@@ -49,7 +55,7 @@ const GradientPicker: React.FC<GradientPickerProps> = ({ gradient, handleChange 
         <Dropdown>
           <Label>Pick a gradient:</Label>
           <Grid>
-            {/* {gradients.slice(20, 70).map((gradient) => (
+            {gradients.slice(20, 70).map((gradient) => (
               <GradientCircle
                 colors={gradient.colors}
                 value={gradient.colors}
@@ -60,13 +66,13 @@ const GradientPicker: React.FC<GradientPickerProps> = ({ gradient, handleChange 
                 }
                 style={{ margin: ".5rem" }}
               />
-            ))} */}
+            ))}
           </Grid>
         </Dropdown>
       }
       dropProps={{ align: { top: "bottom", left: "left" } }}
     >
-      {/* <GradientCircle colors={gradient} /> */}
+      <GradientCircle colors={gradient} />
       <Icon
         name="chevron-down-outline"
         size="medium"
@@ -76,7 +82,7 @@ const GradientPicker: React.FC<GradientPickerProps> = ({ gradient, handleChange 
           infinite: false,
         }}
         fill={neutral[200]}
-        // onChange={handleChange("gradient")}
+        onChange={handleChange("gradient")}
       />
     </StyledDropButton>
   );

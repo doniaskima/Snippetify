@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Display from "./Display";
 import Controls from "./Control";
-
 
 interface BodyProps {
   cssCode: string;
@@ -45,7 +43,6 @@ const Body: React.FC<BodyProps> = ({
 }) => {
   return (
     <Container>
-  
         <Controls
         cssCode={cssCode}
         cssToCopied={cssToCopied}

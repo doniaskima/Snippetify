@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { rgba } from "polished";
 
-const GradientCircle = styled.div`
+interface GradientCircleProps {
+  colors?: string[];
+  selected?: boolean;
+}
+
+const GradientCircle = styled.div<GradientCircleProps>`
   min-width: 24px;
   min-height: 24px;
   max-width: 24px;
@@ -19,17 +24,20 @@ const GradientCircle = styled.div`
   -moz-transition: box-shadow 0.6s ease-out, transform 0.3s ease-out;
   -o-transition: box-shadow 0.6s ease-out, transform 0.3s ease-out;
 
-  ${props =>
-    props.selected
+  ${({ selected, colors }) =>
+    selected
       ? `
-      border: 3px solid ${props.colors[0]};
+      border: 3px solid ${colors?.[0] ?? "transparent"};
       background-color: white;
     `
-      : `background: linear-gradient(-45deg, ${props.colors.join()});`};
+      : colors && colors.length > 0
+      ? `background: linear-gradient(-45deg, ${colors.join(", ")});`
+      : "background-color: transparent;"};
 
   :hover {
     transform: translateY(-2px) scale(1.1);
-    box-shadow: 0 5px 10px ${props => rgba(props.colors[0], 0.5)};
+    box-shadow: 0 5px 10px ${({ colors }) =>
+      colors && colors.length > 0 ? rgba(colors[0], 0.5) : "transparent"};
   }
 `;
 
