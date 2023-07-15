@@ -30,21 +30,11 @@ import ThemeToggle from "./theme-toggle";
 
 import Link from "next/link";
 
-
-function NavLink(props:any) {
+function NavLink(props: any) {
   const { href, name, ...rest } = props;
-  var isActive = false;
-  const   pathname   = useRouter();
+  const { asPath } = useRouter();
 
-  if (href !== "/") {
-    const [, group] = href.split("/");
-
-    // isActive = pathname.includes(group);
-  } else {
-    if (href === pathname) {
-      isActive = true;
-    }
-  }
+  const isActive = asPath === href;
 
   return (
     <NextLink href={href} passHref>
@@ -87,61 +77,9 @@ const Header = () => {
           <HStack justify="space-between" w="100%" h={16}>
             {/* <AvatarNavigation /> */}
             <HStack ml={-4} spacing={2}>
-              <NavLink href="/choose-colors" name="Palettes " />
+              <NavLink href="/choose-colors" name="Palettes" />
               <NavLink href="/about" name="About" />
-              <Menu isOpen={isOpen}>
-                <MenuButton
-                  onMouseEnter={onOpen}
-                  onMouseLeave={onClose}
-                  as={Button}
-            
-                >
-                  Lists
-                </MenuButton>
-                <MenuList
-                  bg={useColorModeValue("white", "neutralD.100")}
-                  borderColor={useColorModeValue("neutral.400", "neutralD.400")}
-                  onMouseEnter={onOpen}
-                  onMouseLeave={onClose}
-                >
-                  <Link href="/buttons">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                         
-                        <Text>Buttons</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/Inputs">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                       
-                        <Text>Inputs</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/checkbox">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                     
-                        <Text>checkbox</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                </MenuList>
-              </Menu>
+              <NavLink href="/" name="Lists" />
             </HStack>
             <HStack>
               <ThemeToggle />
@@ -152,4 +90,5 @@ const Header = () => {
     </Box>
   );
 };
+
 export default Header;

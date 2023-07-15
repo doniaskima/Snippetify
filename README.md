@@ -41,7 +41,7 @@ Snippetify is released under the [MIT License](https://opensource.org/licenses/M
 
 ## Contact
 
-For any inquiries or feedback, please contact us at [email@example.com](doniaskima344@mail.com).
+For any inquiries or feedback, please contact us at [doniaskima344@mail.com](doniaskima344@mail.com).
 
 ## Using
 Grommet: a react-based framework that provides accessibility, modularity, responsiveness, and theming in a tidy package
