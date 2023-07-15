@@ -21,6 +21,7 @@ import Header from "@/components/Header";
 
 import AnimationText from "@/components/AnimationText";
 import BubbleAnimation from "@/components/BubbleAnimation";
+import SocialIcon from "@/components/SocialIcon";
 
 
 const About = () => {
@@ -66,10 +67,12 @@ const About = () => {
           <InterestTag name="Nextjs" />
             <InterestTag name="Chakra UI" />
             <InterestTag name="Tailwind" />
+            <InterestTag name="Styled-components" />
           </div>
       </Section>
       <Section>
         <AnimationText/>
+        {/* <SocialIcon/> */}
       </Section>
     </VStack>
           </Box>

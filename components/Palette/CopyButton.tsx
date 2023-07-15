@@ -50,7 +50,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({
             setIsOpen(true);
             setTimeout(() => setIsOpen(false), 2000);
             onClick();
-            /* Copy to clipboard here and open 'Copied!' popover.*/
+           
           }}
         >
           <CopyIcon size={30} fill={baseColor} />

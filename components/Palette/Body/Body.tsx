@@ -19,7 +19,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   @media (min-width: 1281px) {
     width: 60%;
   }
