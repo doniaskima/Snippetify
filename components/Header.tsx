@@ -1,34 +1,11 @@
+
 import React from "react";
-import {
-  chakra,
-  VStack,
-  HStack,
-  Button,
-  IconButton,
-  useColorMode,
-  Text,
-  Box,
-  Divider,
-  useColorModeValue,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuCommand,
-  MenuDivider,
-  Icon,
-  Avatar,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { chakra, VStack, HStack, Button, IconButton, useColorMode, Text, Box, Divider, useColorModeValue, Menu, MenuButton, MenuList, MenuItem, MenuItemOption, MenuGroup, MenuOptionGroup, MenuCommand, MenuDivider, Icon, Avatar, useDisclosure } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Container from "./container";
 import { useRouter } from 'next/navigation'
 import ThemeToggle from "./theme-toggle";
-
-import Link from "next/link";
+import AvatarNavigation from "./AvatarNavigation";
 
 function NavLink(props: any) {
   const { href, name, ...rest } = props;
@@ -75,8 +52,8 @@ const Header = () => {
       <Container>
         <VStack align="start" spacing={0}>
           <HStack justify="space-between" w="100%" h={16}>
-            {/* <AvatarNavigation /> */}
             <HStack ml={-4} spacing={2}>
+          
               <NavLink href="/choose-colors" name="Palettes" />
               <NavLink href="/about" name="About" />
               <NavLink href="/" name="Lists" />

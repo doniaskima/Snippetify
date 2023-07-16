@@ -8,9 +8,9 @@ interface BodyProps {
   baseColor: string;
   displayText: string;
   gradient: string;
-  position: string;
+  position: number;
   weight: number;
-  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (name: string) => (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Container = styled.div`

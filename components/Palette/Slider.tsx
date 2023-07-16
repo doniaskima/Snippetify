@@ -7,7 +7,7 @@ interface SliderProps {
   max?: number;
   step?: number;
   value?: number;
-  onChange?: (value: number) => void;
+  onChange: (value: number) => void;
 }
 
 const Slider: FC<SliderProps> = ({
@@ -40,7 +40,7 @@ Slider.propTypes = {
   max: PropTypes.number,
   step: PropTypes.number,
   value: PropTypes.number,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Slider;

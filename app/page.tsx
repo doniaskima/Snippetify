@@ -12,8 +12,6 @@ import Container from "@/components/container"
 import { styled } from "styled-components";
  
  
- 
-
 const App = () => {
   return (
     <>
