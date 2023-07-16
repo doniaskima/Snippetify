@@ -25,13 +25,14 @@ const Wrapper = styled.div`
   align-items: center;
   font-family: "Prata", serif;
 `;
-
+ 
 const About: FC<AboutProps> = ({ baseColor, gradient }) => {
   return (
     <>
       <ChakraProvider>
         <Header />
         <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
+       
           <VStack spacing={12} mt={6}>
             <Section>
               <Grommet theme={grommetTheme(baseColor)}>
