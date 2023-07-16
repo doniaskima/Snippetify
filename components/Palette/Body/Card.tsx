@@ -2,10 +2,15 @@ import styled from "styled-components";
 import { radius, neutral } from "@/utils/theme";
 import { rgba } from "polished";
 
-const Card = styled.div`
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  width?: number;
+  height?: number;
+  grow?: number;
+}
+
+const Card = styled.div<CardProps>`
   padding: 1rem;
   width: 100%;
-
   border-radius: ${radius};
   background-color: ${neutral[100]};
   background-color: white;

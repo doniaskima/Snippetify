@@ -44,7 +44,8 @@ const Body: React.FC<BodyProps> = ({
   return (
     <Container>
       <Display cssCode={cssCode} text={displayText} />
-        <Controls
+      
+      <Controls
         cssCode={cssCode}
         cssToCopied={cssToCopied}
         baseColor={baseColor}
