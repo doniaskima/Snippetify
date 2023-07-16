@@ -7,6 +7,7 @@ interface SliderProps {
   max?: number;
   step?: number;
   value?: number;
+  label?:string;
   onChange: (value: number) => void;
 }
 
@@ -27,7 +28,7 @@ const Slider: FC<SliderProps> = ({
       min={min}
       max={max}
       step={step}
-      value={value}
+      value={value.toString()}
       onChange={handleOnChange}
     />
   );
@@ -40,7 +41,7 @@ Slider.propTypes = {
   max: PropTypes.number,
   step: PropTypes.number,
   value: PropTypes.number,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 };
 
 export default Slider;
