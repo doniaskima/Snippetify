@@ -5,10 +5,11 @@ import styled from "styled-components";
 import { Box, ChakraProvider, VStack } from "@chakra-ui/react";
 import Header from "@/components/Header";
 import Section from "@/components/section";
-import { Grommet } from "grommet";
+import {  Grommet } from "grommet";
 import grommetTheme from "@/utils/grommetTheme";
 import { light } from "@/utils/theme";
 import Body from "@/components/Palette/Body/Body";
+import Footer from "@/components/Palette/Footer";
 
 interface AboutProps {
   baseColor: string;
@@ -32,12 +33,12 @@ const About: FC<AboutProps> = ({ baseColor, gradient }) => {
       <ChakraProvider>
         <Header />
         <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
-       
           <VStack spacing={12} mt={6}>
             <Section>
               <Grommet theme={grommetTheme(baseColor)}>
                 <Wrapper>
                   <Body baseColor={baseColor} gradient={gradient} />
+                  <Footer baseColor={baseColor} />
                 </Wrapper>
               </Grommet>
             </Section>
