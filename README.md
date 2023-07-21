@@ -52,3 +52,12 @@ Link:https://github.com/grommet/grommet
 ## polished :A lightweight toolset for writing styles in JavaScript ✨
 Link:https://github.com/styled-components/polished
 Link:https://polished.js.org/
+
+
+## Screenshots
+
+| Hero | Dark | Light |
+|------|-----------------|---------------------|
+| ![Hero](screenshots/Snippetify-1.png) | ![Dark](screenshots/snippetfy-3.png) | ![Light](screenshots/snippetify-2.png) |
+
+ 
