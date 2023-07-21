@@ -58,6 +58,10 @@ Link:https://polished.js.org/
 
 | Hero | Dark | Light |
 |------|-----------------|---------------------|
-| ![Hero](screenshots/Snippetify-1.png) | ![Dark](screenshots/snippetfy-3.png) | ![Light](screenshots/snippetify-2.png) |
+| ![Hero](screenshots/Snippetify-1.png) | ![Dark](screenshots/snippetfy-3.png) | ![Light](screenshots/snippetify-2.png) | 
+
+| About  |   |   |
+|------|-----------------|---------------------|
+| ![About](screenshots/about-page.png) |  
 
  
