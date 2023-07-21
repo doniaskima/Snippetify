@@ -1,12 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { neutral } from "@/utils/theme";
 
-interface DisplayProps {
-  cssCode: string;
-  text: string;
-}
+import styled from "styled-components";
+
+import { neutral } from "@/utils/theme";
 
 const Container = styled.div`
   border: 2px dotted #999;
@@ -30,12 +27,14 @@ const Container = styled.div`
   line-height: 1.2em;
 `;
 
-const Display: React.FC<DisplayProps> = ({ cssCode, text }) => {
+const Display = ({ cssCode, text }) => {
   return (
     <Container cssCode={cssCode}>
       <span>{text}</span>
     </Container>
   );
 };
+
+Display.defaultProps = {};
 
 export default Display;

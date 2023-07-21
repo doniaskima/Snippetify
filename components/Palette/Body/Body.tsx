@@ -44,7 +44,7 @@ const Body: React.FC<BodyProps> = ({
   return (
     <Container>
       <Display cssCode={cssCode} text={displayText} />
-      
+
       <Controls
         cssCode={cssCode}
         cssToCopied={cssToCopied}
@@ -54,7 +54,6 @@ const Body: React.FC<BodyProps> = ({
         weight={weight}
         handleChange={handleChange}
       />
-    
     </Container>
   );
 };
