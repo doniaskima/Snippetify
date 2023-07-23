@@ -1,13 +1,11 @@
 import styled from "styled-components";
 import { radius, neutral } from "@/utils/theme";
 import { rgba } from "polished";
-
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   width?: number;
   height?: number;
   grow?: number;
 }
-
 const Card = styled.div<CardProps>`
   padding: 1rem;
   width: 100%;
@@ -29,8 +27,8 @@ const Card = styled.div<CardProps>`
   @media (min-width: 1px) and (max-width: 767px) {
     min-height: 120px;
     max-height: 120px;
-    min-width: ${(props) => 2 * props.width}px;
-    max-width: ${(props) => 2 * props.width}px;
+    min-width: ${(props) => 2 * props?.width}px;
+    max-width: ${(props) => 2 * props?.width}px;
     min-height: ${(props) => props.height}px;
     max-height: ${(props) => props.height}px;
 

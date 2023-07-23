@@ -50,41 +50,41 @@ const GradientPicker: React.FC<GradientPickerProps> = ({
 }) => {
   return (
     <StyledDropButton
-      alignSelf="center"
-      dropContent={
-        <Dropdown>
-          <Label>Pick a gradient:</Label>
-          <Grid>
-            {gradients.slice(20, 70).map((gradient) => (
-              <GradientCircle
-                colors={gradient.colors}
-                value={gradient.colors}
-                onClick={() =>
-                  handleChange("gradient")({
-                    target: { value: gradient.colors },
-                  })
-                }
-                style={{ margin: ".5rem" }}
-              />
-            ))}
-          </Grid>
-        </Dropdown>
-      }
-      dropProps={{ align: { top: "bottom", left: "left" } }}
-    >
-      <GradientCircle colors={gradient} />
-      <Icon
-        name="chevron-down-outline"
-        size="medium"
-        animation={{
-          type: "pulse",
-          hover: false,
-          infinite: false,
-        }}
-        fill={neutral[200]}
-        onChange={handleChange("gradient")}
-      />
-    </StyledDropButton>
+    alignSelf="center"
+    dropContent={
+      <Dropdown>
+        <Label>Pick a gradient:</Label>
+        <Grid>
+          {gradients.slice(20, 70).map(gradient => (
+            <GradientCircle
+              colors={gradient.colors}
+              value={gradient.colors}
+              onClick={() =>
+                handleChange("gradient")({
+                  target: { value: gradient.colors },
+                })
+              }
+              style={{ margin: ".5rem" }}
+            />
+          ))}
+        </Grid>
+      </Dropdown>
+    }
+    dropProps={{ align: { top: "bottom", left: "left" } }}
+  >
+    <GradientCircle colors={gradient} />
+    <Icon
+      name="chevron-down-outline"
+      size="medium"
+      animation={{
+        type: "pulse",
+        hover: false,
+        infinite: false,
+      }}
+      fill={neutral[200]}
+      onChange={handleChange("gradient")}
+    />
+  </StyledDropButton>
   );
 };
 

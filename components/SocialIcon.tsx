@@ -171,7 +171,7 @@ const SocialIcon = () => {
           viewBox="0 0 40 40"
           className="dribble"
         >
-          {/* Dribbble icon paths */}
+       
         </DribbleIcon>
       </Card>
       <Card>
